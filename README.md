@@ -1,1 +1,1 @@
-# 42-Exam
+kodlarda hata varsa belirtiniz, eksik sorular eklenecektir.
