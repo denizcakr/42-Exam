@@ -38,3 +38,55 @@ char *ft_itoa(int nbr)
     }
     return result;
 }
+
+
+// OTHER SOLUTİON // BİR DİĞER ÇÖZÜM
+
+// #include "stdlib.h"
+
+// int check(int num)
+// {
+//     int i = 0;
+//     if(num == 0)
+//         return 1;
+//     if(num < 0)
+//     {
+//         i++;
+//         num *= -1;
+//     }
+//     while(num != 0)
+//     {
+//         i++;
+//         num /= 10;
+//     }
+//     return i;
+// }
+
+// char	*ft_itoa(int nbr)
+// {
+//     int i = 1;
+//     int len = check(nbr);
+//     char *res = (char *)malloc(sizeof(char) * (len + 1));
+//     if(!res)
+//         return NULL;
+//     res[len] = '\0';
+//     if(nbr == 0)
+//         res[0] = '0';
+//     if(nbr < 0)
+//     {
+//         i = -1;
+//         nbr *= -1;
+//     }
+//     len--;
+//     while(nbr != 0)
+//     {
+//         res[len] = (nbr % 10) + 48;
+//         nbr /= 10;
+//         len--;        
+//     }
+//     if(i == -1)
+//     {
+//         res[0] = '-';
+//     }
+//     return res;
+// }
