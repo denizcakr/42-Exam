@@ -44,20 +44,20 @@ char *ft_itoa(int nbr)
 
 // #include "stdlib.h"
 
-// int check(int num)
+// int check(int nbr)
 // {
 //     int i = 0;
-//     if(num == 0)
+//     if(nbr == 0)
 //         return 1;
-//     if(num < 0)
+//     if(nbr < 0)
 //     {
 //         i++;
-//         num *= -1;
+//         nbr *= -1;
 //     }
-//     while(num != 0)
+//     while(nbr != 0)
 //     {
 //         i++;
-//         num /= 10;
+//         nbr /= 10;
 //     }
 //     return i;
 // }
@@ -82,11 +82,9 @@ char *ft_itoa(int nbr)
 //     {
 //         res[len] = (nbr % 10) + 48;
 //         nbr /= 10;
-//         len--;        
+//         len--;
 //     }
 //     if(i == -1)
-//     {
 //         res[0] = '-';
-//     }
 //     return res;
 // }
