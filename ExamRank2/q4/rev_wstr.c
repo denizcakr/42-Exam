@@ -1,3 +1,4 @@
+
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -19,10 +20,10 @@ int word_count(char *str)
         while(str[i] && !(str[i] <= 32))
             i++;
         count++;
-        while(str[i] <= 32)
+        while(str[i] &&  str[i] <= 32)
             i++;
     }
-    return count;
+    return (count);
 }
 
 char **ft_split(char *str)
@@ -58,7 +59,7 @@ int main(int ac, char **av)
 {
     int i;
     char **tab;
-    if(ac > 1)
+    if(ac == 2)
     {
         i     = 0;
         tab = ft_split(av[1]);
