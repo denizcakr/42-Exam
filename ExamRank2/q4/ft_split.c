@@ -39,7 +39,7 @@ char **ft_split(char *str)
 }
 
 
-// 2. yol
+// another code
 
 
 
