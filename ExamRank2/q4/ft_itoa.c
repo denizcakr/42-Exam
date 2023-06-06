@@ -1,44 +1,41 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-char *ft_itoa(int nbr) 
+#include "stdio.h"
+#include "stdlib.h"
+
+char	*ft_itoa(int nbr)
 {
     int n = nbr;
     int len = 0;
+    char *res;
 
-    if (nbr <= 0)
-    {
-	len++;
-    }
-    while (n) 
+    if(nbr <= 0)
+        len++;
+    while(n)
     {
         n /= 10;
         len++;
     }
-    char *result = (char *)malloc(sizeof(char) * (len + 1));
-    if (result == NULL) 
-    {
+    res = (char *)malloc(sizeof(char) * (len + 1));
+    if(!res)
         return NULL;
-    }
-    result[len] = '\0';
-    if (nbr == 0)
+    res[len] = '\0';
+    if(nbr == 0)
     {
-	result[0] = '0';
-	return(result);
+        res[0] = '0';
+        return res;
     }
-    if (nbr < 0) 
+    if(nbr < 0)
     {
-        result[0] = '-';
+        res[0] = '-';
         nbr = -nbr;
     }
-    while (nbr) 
+    while(nbr)
     {
-        result[--len] = nbr % 10 + '0';
+        res[--len] = nbr % 10 + 48;
         nbr /= 10;
     }
-    return result;
+    return res;
 }
-
 
 // OTHER SOLUTİON // BİR DİĞER ÇÖZÜM
 
