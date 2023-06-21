@@ -39,49 +39,57 @@ char	*ft_itoa(int nbr)
 
 // OTHER SOLUTİON // BİR DİĞER ÇÖZÜM
 
-// #include "stdlib.h"
+#include "stdlib.h"
 
-// int check(int nbr)
+// int sayac(int i)
 // {
-//     int i = 0;
-//     if(nbr == 0)
-//         return 1;
-//     if(nbr < 0)
+//     int a = 0;
+//     while(i)
 //     {
-//         i++;
-//         nbr *= -1;
+//         i /= 10;
+//         a++;
 //     }
-//     while(nbr != 0)
-//     {
-//         i++;
-//         nbr /= 10;
-//     }
-//     return i;
+//     return a;
 // }
 
-// char	*ft_itoa(int nbr)
+// char    *ft_itoa(int nbr)
 // {
-//     int i = 1;
-//     int len = check(nbr);
-//     char *res = (char *)malloc(sizeof(char) * (len + 1));
+//     char tmp[100];
+//     char *res;
+//     int i = sayac(nbr);
+//     int j = 0;
+//     int k = 0;
+
+//     res = (char *)malloc(sizeof(char) * (i + 1));
 //     if(!res)
 //         return NULL;
-//     res[len] = '\0';
 //     if(nbr == 0)
-//         res[0] = '0';
+//         return "0";
+//     if(nbr == -2147483648)
+//         return "-2147483648";
 //     if(nbr < 0)
 //     {
-//         i = -1;
+//         res[j] = '-';
 //         nbr *= -1;
+//         j++;
 //     }
-//     len--;
-//     while(nbr != 0)
+//     while(nbr)
 //     {
-//         res[len] = (nbr % 10) + 48;
+//         tmp[k] = (nbr % 10) + 48;
 //         nbr /= 10;
-//         len--;
+//         k++;
 //     }
-//     if(i == -1)
-//         res[0] = '-';
+//     while(--k >= 0)
+//     {
+//         res[j] = tmp[k];
+//         j++;
+//     }
+//     res[j] = '\0';
 //     return res;
+// }
+
+// #include "stdio.h"
+// int main()
+// {
+//     printf("%s", ft_itoa(-123));
 // }
