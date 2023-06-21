@@ -28,3 +28,65 @@ int main(int ac, char **av)
     }
     write(1, "\n", 1);
 }
+
+
+
+// #include "stdlib.h"
+
+// char **ft_split(char *str)
+// {
+//     int i = 0;
+//     int k = 0;
+//     int j = 0;
+//     char **tab;
+
+//     tab = (char **)malloc(sizeof(**tab) * 9999);
+
+//     while(str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
+//         i++;
+//     while(str[i])
+//     {
+//         if(str[i] > 32)
+//         {
+//             tab[j] = (char *)malloc(sizeof(char) * 9999);
+//             k = 0;
+//             while(str[i] > 32)
+//             {
+//                 tab[j][k] = str[i];
+//                 i++;
+//                 k++;
+//             }
+//             tab[j][k] = '\0';
+//             j++;
+//         }
+//         else
+//             i++;
+//     }
+//     tab[j] = 0;
+//     return tab;
+// }
+// #include "unistd.h"
+// int main(int ac, char **av)
+// {
+//     if(ac == 2)
+//     {
+//         int i = 0;
+//         int a = 0;
+//         char **c = ft_split(av[1]);
+//         while(c[i])
+//             i++;
+//         i--;
+//         while(i >= 0)
+//         {
+//             a = 0;
+//             while(c[i][a])
+//             {
+//                 write(1, &c[i][a++], 1);
+//             }
+//             if(i != 0)
+//                 write(1, " ", 1);
+//             i--;
+//         }
+//     }
+//     write(1, "\n", 1);
+// }
